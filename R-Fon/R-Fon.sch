@@ -143,21 +143,8 @@ F 3 "" H 10000 2900 60  0000 C CNN
 	1    10000 2900
 	0    -1   -1   0   
 $EndComp
-$Comp
-L SPST SW1
-U 1 1 59216F8B
-P 3050 6100
-F 0 "SW1" H 3050 6200 50  0000 C CNN
-F 1 "ON/OFF Switch" H 3050 6000 50  0000 C CNN
-F 2 "" H 3050 6100 60  0000 C CNN
-F 3 "" H 3050 6100 60  0000 C CNN
-	1    3050 6100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3050 6850 3050 7000
-Wire Wire Line
-	3050 6750 3050 6600
 $Comp
 L BC546 Q3
 U 1 1 59217805
@@ -467,17 +454,15 @@ Wire Wire Line
 	3050 5600 2550 5600
 Wire Wire Line
 	2550 6700 2550 6850
-Wire Wire Line
-	2550 6850 3050 6850
 $Comp
 L BatteryConnector P1
 U 1 1 5921CB81
-P 3250 6800
-F 0 "P1" H 3250 6950 50  0000 C CNN
-F 1 "BatteryConnector" V 3350 6800 50  0000 C CNN
-F 2 "" H 3250 6800 60  0000 C CNN
-F 3 "" H 3250 6800 60  0000 C CNN
-	1    3250 6800
+P 3350 6800
+F 0 "P1" H 3350 6950 50  0000 C CNN
+F 1 "BatteryConnector" H 3500 6650 50  0000 C CNN
+F 2 "" H 3350 6800 60  0000 C CNN
+F 3 "" H 3350 6800 60  0000 C CNN
+	1    3350 6800
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -492,4 +477,20 @@ Text Notes 650  4600 0    60   ~ 0
 Battery and power switch
 Text Notes 6250 4600 0    60   ~ 0
 Measurement terminals and overcurrent protection
+$Comp
+L SWITCH_INV SW1
+U 1 1 5921E019
+P 3150 6100
+F 0 "SW1" H 2950 6250 50  0000 C CNN
+F 1 "Battery ON/OFF" V 3150 5750 50  0000 C CNN
+F 2 "" H 3150 6100 60  0000 C CNN
+F 3 "" H 3150 6100 60  0000 C CNN
+	1    3150 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 6850 3150 6850
+Wire Wire Line
+	3150 6600 3150 6750
+NoConn ~ 3250 5600
 $EndSCHEMATC
