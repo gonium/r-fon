@@ -1,0 +1,33 @@
+* /Users/md/Projects/r-fon/R-Fon/R-Fon.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 2017 May 21, Sunday 15:49:47
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+C1  Net-_C1-Pad1_ Net-_C1-Pad2_ 100nF 16V		
+R4  SignalIn Net-_C1-Pad1_ 1k		
+D3  Net-_D3-Pad1_ Net-_D3-Pad2_ 1N4007		
+SW2  Net-_R5-Pad2_ Net-_R3-Pad2_ Net-_P2-Pad2_ SOUND ON/OFF		
+TH1  SignalIn Net-_D3-Pad1_ PTC 120 Ohm		
+P2  GND Net-_P2-Pad2_ Speaker Connector		
+D2  GND Net-_D2-Pad2_ LED		
+SW1  +9V Net-_P1-Pad1_ ON/OFF Switch		
+Q3  SignalOut Net-_C1-Pad2_ GND BC546		
+W1  Net-_D3-Pad2_ +9V Test Leads		
+Q2  Net-_C1-Pad1_ Net-_C2-Pad2_ GND BC546		
+Q1  +9V Net-_Q1-Pad2_ Net-_Q1-Pad3_ BC546		
+C2  SignalOut Net-_C2-Pad2_ 100nF 16V		
+R6  SignalIn Net-_C1-Pad2_ 2k7		
+R7  SignalIn Net-_C2-Pad2_ 2k7		
+R8  SignalIn SignalOut 1k		
+R2  Net-_Q1-Pad2_ SignalOut 10k		
+R3  Net-_Q1-Pad3_ Net-_R3-Pad2_ 390		
+D1  GND Net-_D1-Pad2_ ON/OFF LED		
+R1  +9V Net-_D1-Pad2_ 470		
+R5  Net-_D2-Pad2_ Net-_R5-Pad2_ 470		
+D4  +9V SignalIn 1N4007		
+P1  Net-_P1-Pad1_ GND BatteryConnector		
+
+.end
